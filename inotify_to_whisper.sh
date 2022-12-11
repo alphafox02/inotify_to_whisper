@@ -10,7 +10,6 @@ do
 		ffmpeg -i "$filename" -ar 16000 -ac 1 -c:a pcm_s16le "$filename2".wav
 		echo "Processing file" 
 		/home/dragon/Downloads/whisper.cpp/main -m /home/dragon/Downloads/whisper.cpp/models/ggml-medium.bin -f "$filename2".wav -otxt
-		echo "Processing file"
 	fi
 done
 echo "Stopped watching for files"
